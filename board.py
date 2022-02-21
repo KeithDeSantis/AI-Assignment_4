@@ -1,7 +1,7 @@
 class Board:
     def __init__(self, rows, columns, read_board):
         self.dirs = {0: "▲", 1: "▶", 2: "▼", 3: "◀"}
-        self.board = [[0] * columns] * rows
+        self.board = [[0 for _ in range(columns)] for _ in range(rows)]
         self.rows = rows
         self.cols = columns
         self.read_board = read_board
@@ -13,7 +13,7 @@ class Board:
                 value += f"{col} "
             value += "\n"
 
-        value += "\n" *3
+        value += "-" * self.cols* 2 + "\n"
 
 
         for row in self.board:
