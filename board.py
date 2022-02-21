@@ -13,7 +13,7 @@ class Board:
                 value += f"{col} "
             value += "\n"
 
-        value += "-" * self.cols* 2 + "\n"
+        value += "-" * self.cols * 2 + "\n"
 
 
         for row in self.board:
@@ -27,7 +27,7 @@ class Board:
             key = item[0]
             value = self.dirs[item[1].index(max(item[1]))]
             if self.check_if_terminal(key[0], key[1]):
-                self.board[key[0]][key[1]] = "T"
+                self.board[key[0]][key[1]] = "🏁"
             else:
                 self.board[key[0]][key[1]] = value
 
