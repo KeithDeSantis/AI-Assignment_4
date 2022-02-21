@@ -4,7 +4,7 @@ from agent import Agent
 import boardgenerator
 
 
-def main(filename=None, time_to_run=None, probablity_moving=0.8, constant_reward=-0.01):
+def main(filename=None, time_to_run=5, probability_moving=0.8, constant_reward=-0.01):
     """
     Main function for the program.
     :param filename: a txt file
@@ -31,7 +31,7 @@ def main(filename=None, time_to_run=None, probablity_moving=0.8, constant_reward
     # populate the lookup table with the movement reward as inital values
     board_object.populate_qtable(qtable, constant_reward)
     # Initialize the agent
-    agent = Agent(qtable, board_object, time_to_run, probablity_moving, constant_reward)
+    agent = Agent(qtable, board_object, time_to_run, probability_moving, constant_reward)
     # Run the agent (start learning)
     results = agent.run()
     # print the results

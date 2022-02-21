@@ -86,8 +86,6 @@ class Agent:
         """
         Update the utility of a given space in our lookup table
         """
-        if isinstance(self.row, float) or isinstance(self.col, float) or isinstance(action, float):
-            balls = 1
         previous_utility = self.qtable[self.row, self.col][action]
         next_state = self.get_coords_after_action(self.row, self.col, action)
         # Below is the equation used for Q search from class
