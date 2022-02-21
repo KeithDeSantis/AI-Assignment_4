@@ -3,7 +3,7 @@
 This is the submission for Project 4: Reinforcement Learning for CS 4341: Artificial Intelligence in C22 at WPI. \
 Our implementation is written in python and was developed using the 3.10 interpreter.
 
-Run ```qlearn.py <board-file-path> <time-to-run> <probability-of-moving-in-desired-direction> <constat-reward>``` to run the program on the given board with the given parameters.
+Run ```qlearn.py <board-file-path> <time-to-run> <probability-of-moving-in-desired-direction> <constant-reward>``` to run the program on the given board with the given parameters.
 
 
 This submission contains the following files:
