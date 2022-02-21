@@ -8,14 +8,36 @@ class Board:
 
     def __repr__(self):
         value = ""
+        for row in self.read_board:
+            for col in row:
+                value += f"{col} "
+            value += "\n"
+
+        value += "\n" *3
+
+
         for row in self.board:
             for col in row:
                 value += f"{col} "
             value += "\n"
-        return f"{self.read_board}\n\n{value}"
+        return f"{value}"
 
-    def set_board(self, qtable):
+    def set_to_directional(self, qtable):
         for item in qtable.items():
             key = item[0]
-            value = self.dirs[item.index(max(item[1]))]
+            value = self.dirs[item[1].index(max(item[1]))]
             self.board[key[0]][key[1]] = value
+
+    def check_if_terminal(self, row, col):
+        t = not self.read_board[row][col] == 0
+        return not self.read_board[row][col] == 0
+
+    def populate_qtable(self, qtable, default_value=0):
+
+        for row_count, row in enumerate(self.read_board):
+            for col_count, col in enumerate(self.read_board[row_count]):
+                if self.check_if_terminal(row_count, col_count):
+                    qtable[(row_count, col_count)] = [self.read_board[row_count][col_count] for _ in range(4)]
+                else:
+                    qtable[(row_count, col_count)] = [default_value for _ in range(4)]
+        return True
