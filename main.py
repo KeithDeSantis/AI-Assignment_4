@@ -1,6 +1,7 @@
 from qtable import QTable
 from board import Board
 from agent import Agent
+import boardgenerator
 
 
 def main(filename=None, time_to_run=None, probablity_moving=None, constant_reward=None):
