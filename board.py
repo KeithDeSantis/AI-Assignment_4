@@ -1,9 +1,10 @@
 class Board:
-    def __init__(self, rows, columns):
+    def __init__(self, rows, columns, read_board):
         self.dirs = {0: "▲", 1: "▶", 2: "▼", 3: "◀"}
         self.board = [[0] * columns] * rows
         self.rows = rows
         self.cols = columns
+        self.read_board = read_board
 
     def __repr__(self):
         value = ""
@@ -11,7 +12,7 @@ class Board:
             for col in row:
                 value += f"{col} "
             value += "\n"
-        return value
+        return f"{self.read_board}\n\n{value}"
 
     def set_board(self, qtable):
         for item in qtable.items():
