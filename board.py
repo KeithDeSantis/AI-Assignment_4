@@ -2,12 +2,11 @@ class Board:
     def __init__(self, rows, columns, read_board):
         # icons for readable policy
         self.dirs = {0: "▲", 1: "▶", 2: "▼", 3: "◀"}
-        #initialize board with 0's
+        # initialize board with 0's
         self.board = [[0 for _ in range(columns)] for _ in range(rows)]
         self.rows = rows
         self.cols = columns
         self.read_board = read_board
-
 
     def __repr__(self):
         """
@@ -17,14 +16,14 @@ class Board:
         value = ""
         for row in self.read_board:
             for col in row:
-                value += f"{col} "
+                value += f"{col}\t"
             value += "\n"
 
         value += "-" * self.cols * 2 + "\n"
 
         for row in self.board:
             for col in row:
-                value += f"{col} "
+                value += f"{col}\t"
             value += "\n"
         return f"{value}"
 
