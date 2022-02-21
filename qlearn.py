@@ -5,7 +5,8 @@ from main import main
 def q_learn():
     if len(sys.argv) < 5:
         sys.exit("Invalid number of arguments\n"
-                 "Usage: python3 qlearn.py <filename> <time_to_run> <probability> <constant_reward>")
+                 "\t-Usage: python3 qlearn.py <filename> <time_to_run> <probability> <constant_reward>\n"
+                 "\t-Example: python3 qlearn.py board.txt 1.3 0.9 -0.05")
 
     filename = sys.argv[1]
     time = sys.argv[2]
