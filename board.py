@@ -2,6 +2,8 @@ class Board:
     def __init__(self, rows, columns):
         self.dirs = {0: "▲", 1: "▶", 2: "▼", 3: "◀"}
         self.board = [[0] * columns] * rows
+        self.rows = rows
+        self.cols = columns
 
     def __repr__(self):
         value = ""

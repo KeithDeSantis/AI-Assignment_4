@@ -3,9 +3,12 @@ from qtable import QTable
 
 def main(filename=None, time_to_run=None, probablity_moving=None, constant_reward=None):
     qtable = QTable()
-    qtable['0,0'] = [0, 0, 0, 0]
-    print(qtable.get('0,0'))
+    board = None
+    with open(filename, 'r') as f:
+        board = f.read().replace('\t', '').split('\n')
+        board = [list(x) for x in board]
+    print(board)
 
 
 if __name__ == "__main__":
-    main()
+    main(filename="sample.txt")
