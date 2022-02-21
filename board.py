@@ -26,7 +26,10 @@ class Board:
         for item in qtable.items():
             key = item[0]
             value = self.dirs[item[1].index(max(item[1]))]
-            self.board[key[0]][key[1]] = value
+            if self.check_if_terminal(key[0], key[1]):
+                self.board[key[0]][key[1]] = "T"
+            else:
+                self.board[key[0]][key[1]] = value
 
     def check_if_terminal(self, row, col):
         t = not self.read_board[row][col] == 0
