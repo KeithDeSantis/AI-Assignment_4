@@ -3,6 +3,11 @@ from main import main
 
 
 def q_learn():
+    """
+    Main function for q-learning.
+    reads command line arguments and passes them to main.py
+    :return:
+    """
     if len(sys.argv) < 5:
         sys.exit("Invalid number of arguments\n"
                  "\t-Usage: python3 qlearn.py <filename> <time_to_run> <probability> <constant_reward>\n"

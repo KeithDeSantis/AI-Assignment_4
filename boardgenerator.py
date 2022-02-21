@@ -7,8 +7,6 @@ def generate_board(dimension, filenumber):
     file = open("board" + str(filenumber) + ".txt", 'w')
 
     board = []
-
-
     for row in range(dimension):
         board.append([])
         for col in range(dimension):
@@ -29,3 +27,8 @@ def generate_board(dimension, filenumber):
                 file.write(str(board[row][col]) + "\n")
             else:
                 file.write(str(board[row][col]))
+
+    return f"board{filenumber}.txt"
+
+if __name__ == "__main__":
+    generate_board(3,1)
