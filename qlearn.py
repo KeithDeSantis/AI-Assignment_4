@@ -14,9 +14,9 @@ def q_learn():
                  "\t-Example: python3 qlearn.py board.txt 1.3 0.9 -0.05")
 
     filename = sys.argv[1]
-    time = sys.argv[2]
-    prob_moving = sys.argv[3]
-    constant_reward = sys.argv[4]
+    time = float(sys.argv[2])
+    prob_moving = float(sys.argv[3])
+    constant_reward = float(sys.argv[4])
     main(filename, time, prob_moving, constant_reward)
 
 
