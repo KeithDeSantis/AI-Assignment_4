@@ -37,7 +37,7 @@ class Board:
             key = item[0]
             value = self.dirs[item[1].index(max(item[1]))]
             if self.check_if_terminal(key[0], key[1]):
-                self.board[key[0]][key[1]] = "🏁"
+                self.board[key[0]][key[1]] = max(item[1])#"🏁"
             else:
                 self.board[key[0]][key[1]] = value
 

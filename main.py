@@ -39,4 +39,5 @@ def main(filename=None, time_to_run=5, probability_moving=0.8, constant_reward=-
 
 
 if __name__ == "__main__":
-    main(filename="board1.txt", time_to_run=3)
+    boardgenerator.generate_board(20, 1)
+    main(filename="board1.txt", time_to_run=10)
