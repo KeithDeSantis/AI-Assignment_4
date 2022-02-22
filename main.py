@@ -4,12 +4,12 @@ from agent import Agent
 import boardgenerator
 
 
-def main(filename=None, time_to_run=5, probability_moving=0.8, constant_reward=-0.01):
+def main(filename=None, time_to_run=5, probability_moving=0.9, constant_reward=-0.05):
     """
     Main function for the program.
     :param filename: a txt file
     :param time_to_run: number of seconds to learn for
-    :param probablity_moving: probability of moving in the desired direction
+    :param probability_moving: probability of moving in the desired direction
     :param constant_reward: reward for moving (usually negative)
     :return: None
     """
@@ -39,4 +39,4 @@ def main(filename=None, time_to_run=5, probability_moving=0.8, constant_reward=-
 
 
 if __name__ == "__main__":
-    main(filename="board1.txt", time_to_run=10)
+    main(filename="sample.txt", time_to_run=5, probability_moving=0.9, constant_reward=-0.05)

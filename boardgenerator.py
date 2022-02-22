@@ -37,4 +37,4 @@ def generate_board(dimension, filenumber):
     return f"board{filenumber}.txt"
 
 if __name__ == "__main__":
-    generate_board(3,1)
+    generate_board(6,1)

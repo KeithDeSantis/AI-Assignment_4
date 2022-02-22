@@ -21,4 +21,22 @@ Book-keeping and record files:
 Sample Boards:
 * ```sample.txt```
 
-If you have any trouble running our code, feel free to contact us at kshah2@wpi.edu, lsdias@wpi.edu, and kwdesantis@wpi.edu.
+Sample Output:
+```
+0	0	0	0	0	0	
+0	-1	0	0	8	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+9	0	0	0	0	0	
+0	0	0	0	0	0	
+------------------------
+▼	◀	▼	▼	◀	▼	
+▼	-1	▼	▼	8	▼	
+▼	▼	▼	▼	▼	▼	
+▼	▼	▼	▼	▼	▼	
+9	◀	◀	◀	◀	◀	
+▲	▲	▲	▲	▲	▲
+
+```
+
+If you have any trouble running our code, feel free to contact us at kshah2@wpi.edu, lsdias@wpi.edu, or kwdesantis@wpi.edu.
