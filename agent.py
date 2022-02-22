@@ -40,8 +40,7 @@ class Agent:
         Performs a move with the given action
         :param action_int: The action taken
         """
-        true_action = self.get_true_action(action_int)
-        new_coords = self.get_coords_after_action(self.row, self.col, true_action)
+        new_coords = self.get_coords_after_action(self.row, self.col, action_int)
         self.row = new_coords[0]
         self.col = new_coords[1]
 
@@ -115,13 +114,15 @@ class Agent:
             while not self.input_board.check_if_terminal(self.row, self.col): # Search until we find a terminal
 
                 if random.random() < self.epsilon_greedy: # If the agent is going to explore rather than exploit
-                    action_to_take = self.qtable[self.row, self.col].index(random.choice(self.qtable[self.row, self.col]))
+                    action_to_take = random.randint(0,3)
                 else: # Take the ideal action
                     action_to_take = self.qtable.max_action(self.row, self.col)
 
-                self.update_utility(action_to_take) # Update last utility
+                true_action = self.get_true_action(action_to_take)
 
-                self.move(action_to_take) # Make the move
+                self.update_utility(true_action) # Update last utility
+
+                self.move(true_action) # Make the move
 
 
         self.input_board.set_to_directional(self.qtable) # This function prepares the board object for final output printing
