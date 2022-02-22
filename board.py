@@ -19,7 +19,7 @@ class Board:
                 value += f"{col}\t"
             value += "\n"
 
-        value += "-" * (len("".join(value.split("\n")))//3) + "\n"
+        value += "-" * (len("".join(value.split("\n"))) // 3) + "\n"
 
         for row in self.board:
             for col in row:

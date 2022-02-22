@@ -1,7 +1,6 @@
-from qtable import QTable
-from board import Board
 from agent import Agent
-import boardgenerator
+from board import Board
+from qtable import QTable
 
 
 def main(filename=None, time_to_run=5, probability_moving=0.9, constant_reward=-0.05):
@@ -35,8 +34,8 @@ def main(filename=None, time_to_run=5, probability_moving=0.9, constant_reward=-
     # Run the agent (start learning)
     results = agent.run()
     # print the results
-    print(board_object)
+    print(results)
 
 
 if __name__ == "__main__":
-    main(filename="board1.txt", time_to_run=5, probability_moving=0.9, constant_reward=-0.05)
+    main(filename="sample.txt", time_to_run=5, probability_moving=0.9, constant_reward=-0.05)

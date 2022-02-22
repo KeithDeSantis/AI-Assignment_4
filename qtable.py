@@ -2,6 +2,7 @@ class QTable(dict):
     """
     QTable is a lookup table for Q-Learning, that extends the dict class
     """
+
     def __init__(self):
         super().__init__()
 
