@@ -39,4 +39,4 @@ def main(filename=None, time_to_run=5, probability_moving=0.9, constant_reward=-
 
 
 if __name__ == "__main__":
-    main(filename="sample.txt", time_to_run=5, probability_moving=0.9, constant_reward=-0.05)
+    main(filename="board1.txt", time_to_run=5, probability_moving=0.9, constant_reward=-0.05)
