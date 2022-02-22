@@ -81,14 +81,14 @@ class Agent:
                 return row, column
             return row, column - 1
 
-    def update_utility(self, action):
+    def update_utility(self, attempted_action, true_action):
         """
         Update the utility of a given space in our lookup table
         """
-        previous_utility = self.qtable[self.row, self.col][action]
-        next_state = self.get_coords_after_action(self.row, self.col, action)
+        previous_utility = self.qtable[self.row, self.col][attempted_action]
+        next_state = self.get_coords_after_action(self.row, self.col, true_action)
         # Below is the equation used for Q search from class
-        self.qtable[self.row, self.col][action] = previous_utility + self.step_size*(self.constant_reward +
+        self.qtable[self.row, self.col][attempted_action] = previous_utility + self.step_size*(self.constant_reward +
                                            self.gamma * max(self.qtable[next_state[0], next_state[1]]) - previous_utility)
 
     def generate_start_state(self):
@@ -120,7 +120,7 @@ class Agent:
 
                 true_action = self.get_true_action(action_to_take)
 
-                self.update_utility(true_action) # Update last utility
+                self.update_utility(action_to_take, true_action) # Update last utility
 
                 self.move(true_action) # Make the move
 
