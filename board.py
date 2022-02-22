@@ -19,7 +19,7 @@ class Board:
                 value += f"{col}\t"
             value += "\n"
 
-        value += "-" * self.cols * 2 + "\n"
+        value += "-" * (len("".join(value.split("\n")))//3) + "\n"
 
         for row in self.board:
             for col in row:
@@ -37,7 +37,7 @@ class Board:
             key = item[0]
             value = self.dirs[item[1].index(max(item[1]))]
             if self.check_if_terminal(key[0], key[1]):
-                self.board[key[0]][key[1]] = max(item[1])#"🏁"
+                self.board[key[0]][key[1]] = max(item[1])  # "🏁"
             else:
                 self.board[key[0]][key[1]] = value
 
