@@ -23,7 +23,7 @@ Sample Boards:
 
 Sample Output:
 
-`python3 sample.txt 5 0.8 -0.04`
+`python3 qlearn.py sample.txt 5 0.8 -0.04`
 ```
 0	0	0	0	0	0	
 0	-1	0	0	8	0	
