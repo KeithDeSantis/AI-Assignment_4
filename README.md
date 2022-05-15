@@ -5,6 +5,10 @@ Our implementation is written in python and was developed using the 3.10 interpr
 
 Run ```qlearn.py <board-file-path> <time-to-run> <probability-of-moving-in-desired-direction> <constant-reward>``` to run the program on the given board with the given parameters.
 
+The project was to create a game-playing agent using Reinforcement Learning to play a game where the agent was placed at a starting point, and was tasked
+with getting to a terminating point (a spot with a number). There is a penalty for each "time step" spent moving, and a given probability of deflecting
+whenever the agent attempts to move in a direction. Using reinforcement learning, the agent determines the best course of action based on starting position
+and board.
 
 This submission contains the following files:
 
