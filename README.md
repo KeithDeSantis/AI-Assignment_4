@@ -45,4 +45,6 @@ Sample Output:
 
 ```
 
-If you have any trouble running our code, feel free to contact us at kshah2@wpi.edu, lsdias@wpi.edu, or kwdesantis@wpi.edu.
+The arrows indicate the direction the agent would try to move from that spot.
+
+If you have any trouble running the code, feel free to contact me at kwdesantis@wpi.edu.
